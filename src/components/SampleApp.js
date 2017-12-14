@@ -1,10 +1,10 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 // import FuelSavingsResults from './FuelSavingsResults';
-import FuelSavingsTextInput from './FuelSavingsTextInput';
+//import FuelSavingsTextInput from './FuelSavingsTextInput';
 //import {fuelSavings} from '../types';
 
-function SampleApp({fuelSavings, onChange}) {
+function SampleApp() {
   return (
     <div>
       <h2>Sample App</h2>
