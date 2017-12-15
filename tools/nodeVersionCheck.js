@@ -5,6 +5,7 @@ exec('node -v', function (err, stdout) {
   if (err) throw err;
 
   if (parseFloat(stdout.slice(1)) < 4) {
-    throw new Error('React Slingshot requires node 4.0 or greater.');
+    throw new Error('This React Application requires node 4.0 or greater.');
   }
 });
+

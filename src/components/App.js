@@ -12,19 +12,22 @@ import NotFoundPage from './NotFoundPage';
 
 class App extends React.Component {
   render() {
-    const activeStyle = { color: 'blue' };
+    const activeStyle = { color: 'lightblue' };
     return (
-      <div>
-        <div>
-          <NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink>
-          {' | '}
-          <NavLink to="/sample" activeStyle={activeStyle}>Sample App</NavLink>
+      <div className="bodycontainer">
+        <div className="nav-bar">
+          <ul className="menu">
+            <li><NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink></li>
+            <li><NavLink to="/sample" activeStyle={activeStyle}>Sample App</NavLink></li>
+          </ul>
         </div>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/sample" component={SampleAppPage} />
-          <Route component={NotFoundPage} />
-        </Switch>
+        <div className="content-container">
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/sample" component={SampleAppPage} />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </div>
       </div>
     );
   }

@@ -1,30 +1,21 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
-// import FuelSavingsResults from './FuelSavingsResults';
-//import FuelSavingsTextInput from './FuelSavingsTextInput';
-//import {fuelSavings} from '../types';
+import SampleAppOne from './SampleAppOne';
 
-function SampleApp() {
+/**
+ * use state to affect 3 things
+ *
+ */
+
+ function SampleApp() {
   return (
     <div>
-      <h2>Sample App</h2>
+      <h2>Sample Application</h2>
 
-      - - - - -
+      <SampleAppOne />
 
 
-
-      <hr/>
-
-    </div>
+      </div>
   );
 }
-
-// const { func } = PropTypes;
-
-// SampleApp.propTypes = {
-//   onSaveClick: func.isRequired,
-//   onChange: func.isRequired,
-//   fuelSavings: fuelSavings.isRequired
-// };
 
 export default SampleApp;
