@@ -3,6 +3,8 @@ import React from 'react';
 /**
  * use state to affect 3 things
  * pass values up thru the parent down to kids
+ * review props and state relationships
+ * cover the main basics // https://reactjs.org/docs/installation.html
  */
 
 class SampleAppOne extends React.Component {
@@ -22,7 +24,6 @@ class SampleAppOne extends React.Component {
       filterText: e,
       postText: (e.length > 3) ? true : false
     });
-    // console.log(this.state);
   }
 
   render() {

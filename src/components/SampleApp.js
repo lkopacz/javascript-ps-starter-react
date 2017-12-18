@@ -1,20 +1,22 @@
 import React from 'react';
 import SampleAppOne from './SampleAppOne';
+import TimeTracker from './timeTracker';
 
 /**
  * use state to affect 3 things
  *
  */
 
- function SampleApp() {
+function SampleApp() {
   return (
-    <div>
+    <div className="sample-app">
       <h2>Sample Application</h2>
 
+      <TimeTracker />
       <SampleAppOne />
 
 
-      </div>
+    </div>
   );
 }
 
