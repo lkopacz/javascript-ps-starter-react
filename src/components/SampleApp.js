@@ -1,6 +1,7 @@
 import React from 'react';
 import SampleAppOne from './SampleAppOne';
 import TimeTracker from './timeTracker';
+import CoursePages from './CoursePages';
 
 /**
  * use state to affect 3 things
@@ -14,7 +15,7 @@ function SampleApp() {
 
       <TimeTracker />
       <SampleAppOne />
-
+      <CoursePages />
 
     </div>
   );
