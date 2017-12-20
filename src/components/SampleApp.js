@@ -2,6 +2,7 @@ import React from 'react';
 import SearchApp from './SearchApp';
 import TimeTracker from './timeTracker';
 import UserApp from './UserApp';
+import StarWarsApp from './StarWarsApp';
 
 function SampleApp() {
   return (
@@ -17,6 +18,11 @@ function SampleApp() {
       <div className="boxy float-left clearfix">
         <UserApp />
       </div>
+
+      <div className="boxy float-left clearfix">
+        <StarWarsApp />
+      </div>
+
 
     </div>
   );

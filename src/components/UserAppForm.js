@@ -7,8 +7,8 @@ const UserAppForm = ({ onNameChange, Name, onTitleChange, Title, onClickSave, Us
     <div className="user-container">
       <h4>User Component</h4>
       <p>This is an example of Redux and typical state workflow.</p>
-      <input placeholder="Type Name" onChange={onNameChange} value={Name} type="text" />
-      <input placeholder="Type Title" onChange={onTitleChange} value={Title} type="text" />
+      <input placeholder="Name" onChange={onNameChange} value={Name} type="text" />
+      <input placeholder="Title" onChange={onTitleChange} value={Title} type="text" />
       <input className="button" onClick={onClickSave} type="submit" value="send >" />
       <span className="user-list">{UserRow}</span>
     </div>
