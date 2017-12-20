@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as userActions from '../actions/userActions';
-
+import UserAppForm from './UserAppForm';
 import '../styles/userapp.scss';
 
 /*eslint-disable no-console */
@@ -55,16 +55,14 @@ class UserApp extends React.Component {
       console.log('Render() for this.props.users', this.props.users);
     }
     return (
-      <div className="user-container">
-
-        <h4>User Component</h4>
-        <p>This is an example of Redux and typical state workflow.</p>
-
-        <input placeholder="Type Name" onChange={this.onNameChange} value={this.props.users.name} type="text" />
-        <input placeholder="Type Title" onChange={this.onTitleChange} value={this.props.users.title} type="text" />
-        <input onClick={this.onClickSave} type="submit" value="send >" />
-        <span className="user-list">{this.props.users.map(this.userRow)}</span>
-      </div>
+      <UserAppForm
+        onNameChange={this.onNameChange}
+        Name={this.props.users.name}
+        onTitleChange={this.onTitleChange}
+        Title={this.props.users.title}
+        onClickSave={this.onClickSave}
+        UserRow={this.props.users.map(this.userRow)}
+      />
     );
   }
 }
