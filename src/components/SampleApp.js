@@ -1,12 +1,7 @@
 import React from 'react';
-import SampleAppOne from './SampleAppOne';
+import SearchApp from './SearchApp';
 import TimeTracker from './timeTracker';
-import CoursePages from './CoursePages';
-
-/**
- * use state to affect 3 things
- *
- */
+import UserApp from './UserApp';
 
 function SampleApp() {
   return (
@@ -14,8 +9,14 @@ function SampleApp() {
       <h2>Sample Application</h2>
 
       <TimeTracker />
-      <SampleAppOne />
-      <CoursePages />
+
+      <div className="boxy float-left clearfix">
+        <SearchApp />
+      </div>
+
+      <div className="boxy float-left clearfix">
+        <UserApp />
+      </div>
 
     </div>
   );

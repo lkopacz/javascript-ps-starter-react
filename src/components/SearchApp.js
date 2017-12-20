@@ -7,7 +7,7 @@ import React from 'react';
  * cover the main basics // https://reactjs.org/docs/installation.html
  */
 
-class SampleAppOne extends React.Component {
+class SearchApp extends React.Component {
 
   constructor(props) {
     super(props);
@@ -29,6 +29,8 @@ class SampleAppOne extends React.Component {
   render() {
     return (
       <div>
+        <h4>Search Component</h4>
+        <p> This is an example of prop value matching in React.  </p>
         <form>
           <input type="text" placeholder="Search" value={this.state.filterText} onChange={this.handleChange} />
           <p>
@@ -40,4 +42,4 @@ class SampleAppOne extends React.Component {
   }
 }
 
-export default SampleAppOne;
+export default SearchApp;

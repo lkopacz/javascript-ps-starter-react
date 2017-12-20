@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux';
-// import { routerReducer } from 'react-router-redux';
-import courses from './courseReducer';
+import users from './userReducer';
 
 const rootReducer = combineReducers({
-  courses
+  users
 });
 
 export default rootReducer;
