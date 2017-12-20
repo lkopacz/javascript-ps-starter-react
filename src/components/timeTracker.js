@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function FormattedDate(props) {
   // console.log(props.date);
@@ -38,5 +39,9 @@ class TimeTracker extends React.Component { // https://reactjs.org/docs/componen
     );
   }
 }
+
+TimeTracker.propTypes = {
+  date: PropTypes.string
+};
 
 export default TimeTracker;

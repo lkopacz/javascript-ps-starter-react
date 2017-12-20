@@ -1,9 +1,12 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as courseActions from '../actions/courseActions';
 
 /*eslint-disable no-console */
+
+// https://app.pluralsight.com/player?course=react-redux-react-router-es6&author=cory-house&name=react-redux-react-router-es6-m8&clip=9&mode=live
 
 class CoursePages extends React.Component {
 
@@ -26,7 +29,7 @@ class CoursePages extends React.Component {
   }
 
   onClickSave() {
-    this.props.dispatch(courseActions.createCourse(this.state.course));
+    this.props.actions.createCourse(this.state.course);
   }
 
   courseRow(course, index) {
@@ -35,6 +38,7 @@ class CoursePages extends React.Component {
   }
 
   render() {
+    // debugger;
     if (this.props.courses.length) {
       console.log('Render() for this.props.courses', this.props.courses);
     }
@@ -51,22 +55,21 @@ class CoursePages extends React.Component {
 }
 
 CoursePages.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-  courses: PropTypes.array.isRequired
+  courses: PropTypes.array.isRequired,
+  actions: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) { // , ownProps
+  // debugger;
   return {
     courses: state.courses
   };
 }
 
+function MapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(courseActions, dispatch)
+  };
+}
 
-// function MapDispatchToProps(state, ownProps){
-//   return {
-//     courses: state.courses
-//   };
-// }
-// , MapDispatchToProps
-
-export default connect(mapStateToProps)(CoursePages);
+export default connect(mapStateToProps, MapDispatchToProps)(CoursePages);
