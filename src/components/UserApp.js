@@ -39,18 +39,21 @@ class UserApp extends React.Component {
     });
   }
 
-  onClickSave() {
-    // console.log(this.props.actions);
-    this.props.actions.createUser(this.state.user);
+  onClickSave(event) {
+    event.preventDefault();
+    if ((this.state.user.name != null) && (this.state.user.title != null)) {
+      this.props.actions.createUser(this.state.user);
+    }
+    else {
+      console.log('You need both fields filled out.');
+    }
   }
 
   userRow(user, index) {
-    // console.log('userRow', user);
     return <div key={index}>name: {user.name} <br /> title: {user.title}</div>;
   }
 
   render() {
-    // debugger;
     if (this.props.users.length) {
       console.log('Render() for this.props.users', this.props.users);
     }

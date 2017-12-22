@@ -7,9 +7,11 @@ const UserAppForm = ({ onNameChange, Name, onTitleChange, Title, onClickSave, Us
     <div className="user-container">
       <h4>User Redux Component</h4>
       <p>This is an example of Redux and typical state workflow when dealing with persistance states.</p>
-      <input placeholder="Name" onChange={onNameChange} value={Name} type="text" />
-      <input placeholder="Title" onChange={onTitleChange} value={Title} type="text" />
-      <input className="button" onClick={onClickSave} type="submit" value="send >" />
+      <form onSubmit={onClickSave}>
+        <input placeholder="Name" onChange={onNameChange} value={Name} type="text" />
+        <input placeholder="Title" onChange={onTitleChange} value={Title} type="text" />
+        <input className="button" type="submit" value="send >" />
+      </form>
       <span className="user-list">{UserRow}</span>
     </div>
   );
