@@ -1,17 +1,15 @@
 import * as types from './starwarsTypes';
 import starwarsAPI from '../api/starwarsAPI';
 
-/*eslint-disable no-console */
-
 export function loadStarWarsSuccess(starwars) {
   return { type: types.LOAD_STARWARS_SUCCESS, starwars };
 }
 
-export function loadStarWars() {
+export function loadStarWars(API_LOC = types.STARWARS_API_LOC) {
   return function (dispatch) {
-    return starwarsAPI.getAllStarWars().then(starwars => {
+    return starwarsAPI.getAllStarWars(API_LOC).then(starwars => {
       // console.log('loadStarWarsSuccess() =>', loadStarWarsSuccess(starwars));
-      dispatch(loadStarWarsSuccess(starwars));
+      return dispatch(loadStarWarsSuccess(starwars));
     }).catch(error => {
       throw (error);
     });
