@@ -40,6 +40,7 @@ class StarWarsApp extends React.Component {
   }
 
   onAPIChange(event) {
+    //console.log('this',this);
     const mount_actions = this.props.actions;
     const sw = this.state.sw;
     sw.api_selected = event.target.value;
@@ -107,13 +108,13 @@ StarWarsApp.propTypes = {
   actions: PropTypes.object.isRequired
 };
 
-function mapStateToProps(state) {
+export function mapStateToProps(state) {
   return {
     starwars: state.starwars
   };
 }
 
-function MapDispatchToProps(dispatch) {
+export function MapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators(actions, dispatch)
   };

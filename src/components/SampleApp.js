@@ -3,6 +3,14 @@ import SearchApp from './SearchApp';
 import TimeTracker from './timeTracker';
 import UserApp from './UserApp';
 import StarWarsApp from './StarWarsApp';
+import StarWarsExternalApp from './StarWarsExternalApp';
+
+/**
+ * TODO...
+ * Async example
+ * Share state in other component
+ */
+
 
 function SampleApp() {
   return (
@@ -21,6 +29,10 @@ function SampleApp() {
 
       <div className="boxy float-left clearfix">
         <StarWarsApp />
+      </div>
+
+      <div className="boxy float-left clearfix">
+        <StarWarsExternalApp />
       </div>
 
 
