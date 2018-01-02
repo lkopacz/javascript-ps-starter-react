@@ -84,7 +84,7 @@ class StarWarsApp extends React.Component {
       return (
         <div className="sw-component">
           <h4>API Redux Component</h4>
-          <p>A sample application showing the use of Redux when fetching external API data from a Star Wars service.</p>
+          <p>A sample application showing the use of Redux when fetching external API data from a Star Wars webservice.</p>
           <select onChange={this.onAPIChange}>
             <option value="na">Choose API endpoint</option>
             {api_selects}

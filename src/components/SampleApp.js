@@ -7,7 +7,7 @@ import StarWarsApp from './StarWarsApp';
 function SampleApp() {
   return (
     <div className="sample-app">
-      <h2>Sample Application</h2>
+      <h2>Collection of Sample Components</h2>
 
       <TimeTracker />
 

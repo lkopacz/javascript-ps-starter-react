@@ -6,10 +6,6 @@ import HomePage from './HomePage';
 import SampleAppPage from '../containers/SampleAppPage';
 import NotFoundPage from './NotFoundPage';
 
-// This is a class-based component because the current
-// version of hot reloading won't hot reload a stateless
-// component at the top-level.
-
 class App extends React.Component {
   render() {
     const activeStyle = { color: 'lightblue' };
