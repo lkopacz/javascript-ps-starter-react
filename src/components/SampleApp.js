@@ -4,13 +4,12 @@ import TimeTracker from './timeTracker';
 import UserApp from './UserApp';
 import StarWarsApp from './StarWarsApp';
 import StarWarsExternalApp from './StarWarsExternalApp';
+import IncrementApp from './IncrementApp';
 
 /**
- * TODO...
- * Async example
- * Share state in other component
+ * @TODO
+ * pin node version
  */
-
 
 function SampleApp() {
   return (
@@ -21,6 +20,10 @@ function SampleApp() {
 
       <div className="boxy float-left clearfix">
         <SearchApp />
+      </div>
+
+      <div className="boxy float-left clearfix">
+        <IncrementApp />
       </div>
 
       <div className="boxy float-left clearfix">
