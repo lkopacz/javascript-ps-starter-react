@@ -40,14 +40,12 @@ class StarWarsApp extends React.Component {
   }
 
   onAPIChange(event) {
-    //console.log('this',this);
     const mount_actions = this.props.actions;
     const sw = this.state.sw;
     sw.api_selected = event.target.value;
     mount_actions.loadStarWars(sw.api_selected).then(function (obj) {
       return obj;
     }).then((response) => {
-      // console.log('response', response.starwars);
       sw.api_results = response.starwars;
       this.setState({
         sw
@@ -64,7 +62,6 @@ class StarWarsApp extends React.Component {
           el.map((item, index) => (
             <div key={index}>
               <div className="headline">{item['name']}{item['title']}</div>
-              <div className="stringfied"><pre>{JSON.stringify(item, null, 3)}</pre></div>
             </div>
           ))
         }
@@ -80,17 +77,24 @@ class StarWarsApp extends React.Component {
       });
       const api_results = this.props.starwars.results;
       const api_rows = (api_results) ? this.starwarsRows(api_results) : ' ';
-      // console.log('api_results ===>', api_results);
-      // console.log('api_rows ===>', api_rows);
       return (
-        <div className="sw-component">
-          <h4>API Redux Component</h4>
-          <p>A sample application showing the use of Redux when fetching external API data from a Star Wars webservice.</p>
+        <div>
+          <h4>API Redux Component (Star Wars pt. 1)</h4>
+          <p>A sample application showing the use of Redux when fetching external API data from a Star Wars webservice.
+            This fetches and displays API information based on choices pulled from the API. See next component for full API data.</p>
           <select onChange={this.onAPIChange}>
             <option value="na">Choose API endpoint</option>
             {api_selects}
           </select>
           <div>
+            {this.props.starwars.count ?
+              <div className="count-results">
+                <strong>Number of results: </strong>
+                <span>{this.props.starwars.count}</span>
+              </div>
+              :
+              <span>&nbsp;</span>
+            }
             {api_rows}
           </div>
         </div>
