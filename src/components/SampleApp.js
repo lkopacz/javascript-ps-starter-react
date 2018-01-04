@@ -9,14 +9,16 @@ import IncrementApp from './IncrementApp';
 /**
  * @TODO
  * pin node version
+ * add GraphQL
  */
 
 function SampleApp() {
   return (
     <div className="sample-app">
-      <h2>Collection of Sample Components</h2>
 
-      <TimeTracker />
+    <TimeTracker />
+
+      <h2>Collection of Sample Components</h2>
 
       <div className="boxy float-left clearfix">
         <SearchApp />

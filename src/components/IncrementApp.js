@@ -29,9 +29,10 @@ class IncrementApp extends React.Component {
   }
 
   render() {
-    console.log('this.props.number ==> ', this.props.number);
     return (
       <div>
+        <h4>Increment Redux Component</h4>
+        <p>This is an example of Redux tracking previous and future counter markers and how these correlate in the state of the application.</p>
         <p>
           <input className="button" type="button" value="- 1" onClick={this.handleClick} />
           &nbsp;
