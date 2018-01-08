@@ -45,7 +45,7 @@ class IncrementApp extends React.Component {
 }
 
 IncrementApp.propTypes = {
-  number: PropTypes.number.number,
+  //number: PropTypes.number.number,
   actions: PropTypes.object.isRequired
 };
 
