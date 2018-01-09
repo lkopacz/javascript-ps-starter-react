@@ -15,20 +15,56 @@ const fetch = createApolloFetch({
   uri: 'http://localhost:8081/graphql',
 });
 
-export function loadGraphQL(GraphQL_LOC = 'http://localhost:8081/graphql') {
+const default_query = {
+  query: gql`
+  query {
+    allVillians {
+      id
+      name
+    }
+  }`
+};
+
+const full_query = {
+  query: gql`
+  query {
+    allVillians {
+      id
+      name
+      age
+      weight
+      image
+      description
+      powers
+      first_appearance
+    }
+  }`
+};
+
+const count_query = {
+  query: gql`
+  query {
+    totalVillans
+  }`
+};
+
+function match_queries(query) {
+  switch (query) {
+    case 'total_villians':
+      return count_query;
+    case 'full_list':
+      return full_query;
+    case 'default':
+      return default_query;
+    default:
+      return default_query;
+  }
+}
+
+export function loadGraphQL(queries = 'default') {
   return function (dispatch) {
-    return fetch({
-      query: gql `
-      query {
-        allUsers {
-          id
-          name
-        }
-        totalUsers
-      }
-  `,
-    }).then(graphql => {
-      console.log('graphql.data ====> ', graphql.data);
+    return fetch(match_queries(queries)).then(graphql => {
+      // console.log('graphql.data ====> ', graphql.data);
       return dispatch(loadGraphQLSuccess(graphql));
     });
   };

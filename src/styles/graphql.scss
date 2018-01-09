@@ -1,0 +1,22 @@
+.rows-villians {
+  display: block;
+  border-bottom: 1px dotted lightblue;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  &:last-child {
+    border-bottom: transparent;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  img {
+    max-width: 125px;
+    height: auto;
+    border-radius: 15px;
+  }
+  >* {
+    margin-bottom: 7px;
+  }
+}
+.data-for-villans {
+  padding: 25px 0 0 ;
+}
