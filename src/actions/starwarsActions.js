@@ -8,7 +8,6 @@ export function loadStarWarsSuccess(starwars) {
 export function loadStarWars(API_LOC = types.STARWARS_API_LOC) {
   return function (dispatch) {
     return starwarsAPI.getAllStarWars(API_LOC).then(starwars => {
-      // console.log('loadStarWarsSuccess() =>', loadStarWarsSuccess(starwars));
       return dispatch(loadStarWarsSuccess(starwars));
     }).catch(error => {
       throw (error);

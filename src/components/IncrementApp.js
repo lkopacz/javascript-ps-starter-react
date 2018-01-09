@@ -19,7 +19,7 @@ class IncrementApp extends React.Component {
 
   handleClick(event) {
     let e = event.target.value;
-    console.log('this.state -> ', this.state);
+    // console.log('this.state -> ', this.state);
     if (e == '- 1') {
       this.setState({ number: --this.state.number });
     } else {

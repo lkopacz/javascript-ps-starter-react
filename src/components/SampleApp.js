@@ -29,9 +29,8 @@ const client = new ApolloClient({
  */
 
 function SampleApp() {
-
-
   return (
+
     <div className="sample-app">
 
       <TimeTracker />
