@@ -22,6 +22,7 @@ const client = new ApolloClient({
  * @TODO
  * [] pin node version
  * [] explore serving graphql server and client together
+ * [] add more villains
  */
 
 function SampleApp() {

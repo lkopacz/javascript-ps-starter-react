@@ -14,7 +14,7 @@ class GraphqlClientApp extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.state = {
       graphql_data: [],
-      show_villians: false
+      show_villains: false
     };
   }
 
@@ -30,12 +30,12 @@ class GraphqlClientApp extends React.Component {
     });
   }
 
-  villianRows(el) {
+  villainRows(el) {
     return (
       <div>
         {
           el.map((item, index) => (
-            <div className="rows-villians" key={index}>
+            <div className="rows-villains" key={index}>
               {item['image'] ? <img src={item['image']} /> : null}
               <div className="id">ID: {item['id']}</div>
               <div className="name">Name: {item['name']}</div>
@@ -59,7 +59,7 @@ class GraphqlClientApp extends React.Component {
     }).then((response) => {
       // console.log('response ==>', response.graphql.data);
       this.setState({ graphql_data: response.graphql.data });
-      this.setState({ show_villians: true });
+      this.setState({ show_villains: true });
     }).catch(error => {
       throw (error);
     });
@@ -74,8 +74,8 @@ class GraphqlClientApp extends React.Component {
       return false;
     }
 
-    const villian_data = graphql_data.hasOwnProperty('allVillians') ? this.villianRows(graphql_data.allVillians) : ' ';
-    const villian_count = graphql_data.hasOwnProperty('totalVillans') ? 'Total Villians: ' + graphql_data.totalVillans : ' ';
+    const villain_data = graphql_data.hasOwnProperty('allVillains') ? this.villainRows(graphql_data.allVillains) : ' ';
+    const villain_count = graphql_data.hasOwnProperty('totalVillains') ? 'Total Villains: ' + graphql_data.totalVillains : ' ';
 
     return (
 
@@ -87,16 +87,16 @@ class GraphqlClientApp extends React.Component {
         This data is also being stored within the Redux store state.</p>
         <br />
 
-        <button className="button" type="button" value="default" onClick={this.handleClick}>Show all Villian Summary</button>
+        <button className="button" type="button" value="default" onClick={this.handleClick}>Show all Villain Summary</button>
         &nbsp;
-        <button className="button" type="button" value="full_list" onClick={this.handleClick}>Show all Villian Properties</button>
+        <button className="button" type="button" value="full_list" onClick={this.handleClick}>Show all Villain Properties</button>
         &nbsp;
-        <button className="button" type="button" value="total_villians" onClick={this.handleClick}>Show Villian Count</button>
+        <button className="button" type="button" value="total_villains" onClick={this.handleClick}>Show Villain Count</button>
 
-        {this.state.show_villians ?
+        {this.state.show_villains ?
           <div className="data-for-villans">
-            {villian_data}
-            {villian_count}
+            {villain_data}
+            {villain_count}
           </div>
           :
           <span>&nbsp;</span>

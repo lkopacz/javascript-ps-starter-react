@@ -18,7 +18,7 @@ const fetch = createApolloFetch({
 const default_query = {
   query: gql`
   query {
-    allVillians {
+    allVillains {
       id
       name
     }
@@ -28,7 +28,7 @@ const default_query = {
 const full_query = {
   query: gql`
   query {
-    allVillians {
+    allVillains {
       id
       name
       age
@@ -44,13 +44,13 @@ const full_query = {
 const count_query = {
   query: gql`
   query {
-    totalVillans
+    totalVillains
   }`
 };
 
 function match_queries(query) {
   switch (query) {
-    case 'total_villians':
+    case 'total_villains':
       return count_query;
     case 'full_list':
       return full_query;
