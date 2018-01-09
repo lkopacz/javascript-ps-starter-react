@@ -7,12 +7,6 @@ import { connect } from 'react-redux';
 import '../styles/graphql.scss';
 import * as actions from '../actions/graphqlclientActions';
 
-/**
- * connect to redux
- * click actions show different results
- * update schema to something fun
- */
-
 class GraphqlClientApp extends React.Component {
 
   constructor(props, store) {

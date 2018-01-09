@@ -20,14 +20,11 @@ const client = new ApolloClient({
 
 /**
  * @TODO
- * pin node version
+ * [] pin node version
+ * [] explore serving graphql server and client together
  */
 
 function SampleApp() {
-
-
-
-  console.log(client);
 
   return (
 
@@ -60,7 +57,6 @@ function SampleApp() {
       <ApolloProvider client={client}>
         <GraphqlClientApp />
       </ApolloProvider>
-
 
     </div>
   );
