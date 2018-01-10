@@ -10,8 +10,15 @@ import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import config from '../webpack.config.dev';
+// import proxy from 'http-proxy-middleware';
 
 const bundler = webpack(config);
+
+// const serverProxy = proxy('/graphiql', {
+//   target: "http://localhost:8082",
+//   changeOrigin: false,
+//   logLevel: 'debug'
+// });
 
 // Run Browsersync and use middleware for Hot Module Replacement
 browserSync({
@@ -24,6 +31,10 @@ browserSync({
 
     middleware: [
       historyApiFallback(),
+
+      // The order of serverProxy is important. It will not work if it is indexed
+      // after the webpackDevMiddleware in this array.
+      // serverProxy,
 
       webpackDevMiddleware(bundler, {
         // Dev middleware can't access config, so we provide publicPath
