@@ -14,7 +14,7 @@
     border-radius: 15px;
   }
   >* {
-    margin-bottom: 7px;
+    margin-bottom: 4px;
   }
 }
 
@@ -25,4 +25,35 @@
 input[type=text] {
   max-width: inherit;
   width: auto;
+}
+
+.query-display {
+  font-family: monospace;
+  white-space: pre;
+  font-size: 80%;
+  background: #add8e63b;
+  display: inline-block;
+  padding: 0 50px 10px 0;
+  span {
+    font-family: 'Roboto';
+    font-size: 120%;
+    background: #7f7f84;
+    padding: 3px;
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+form.graphql-form {
+  max-width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  border-right: 1px dashed #d3d3d3;
+  margin-right: 45px;
+  padding-right: 45px;
+  > span {
+    min-width: 250px;
+    clear: both;
+    display: block;
+  }
 }

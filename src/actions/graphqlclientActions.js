@@ -72,7 +72,7 @@ function count_query() {
   };
 }
 
-function match_queries(query, id = 0) {
+export function match_queries(query, id = 0) {
   switch (query) {
     case 'total_villains':
       return count_query();
