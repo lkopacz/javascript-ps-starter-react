@@ -12,58 +12,84 @@ export function loadGraphQLSuccess(graphql) {
 }
 
 const fetch = createApolloFetch({
-  uri: 'http://localhost:8081/graphql',
+  uri: 'http://localhost:8082/graphql',
 });
 
-const default_query = {
-  query: gql`
-  query {
-    allVillains {
-      id
-      name
-    }
-  }`
-};
+function default_query() {
+  return {
+    query: gql`
+      query {
+        allVillains {
+          id
+          name
+        }
+      }`
+  };
+}
 
-const full_query = {
-  query: gql`
-  query {
-    allVillains {
-      id
-      name
-      age
-      weight
-      image
-      description
-      powers
-      first_appearance
-    }
-  }`
-};
+function full_query() {
+  return {
+    query: gql`
+      query {
+        allVillains {
+          id
+          name
+          age
+          weight
+          image
+          description
+          powers
+          first_appearance
+        }
+      }`
+  };
+}
 
-const count_query = {
-  query: gql`
-  query {
-    totalVillains
-  }`
-};
+function filter_by_id(id) {
+  return {
+    query: gql`
+      query {
+        villain(id: ${id}) {
+          id
+          name
+          age
+          weight
+          image
+          description
+          powers
+          first_appearance
+        }
+      }`
+  };
+}
 
-function match_queries(query) {
+function count_query() {
+  return {
+    query: gql`
+      query {
+        totalVillains
+      }`
+  };
+}
+
+function match_queries(query, id = 0) {
   switch (query) {
     case 'total_villains':
-      return count_query;
+      return count_query();
     case 'full_list':
-      return full_query;
+      return full_query();
+    case 'filter_by_id':
+      return filter_by_id(id);
     case 'default':
-      return default_query;
+      return default_query();
     default:
-      return default_query;
+      return default_query();
   }
 }
 
-export function loadGraphQL(queries = 'default') {
+export function loadGraphQL(queries = 'default', id = 0) {
   return function (dispatch) {
-    return fetch(match_queries(queries)).then(graphql => {
+    return fetch(match_queries(queries, id)).then(graphql => {
       // console.log('graphql.data ====> ', graphql.data);
       return dispatch(loadGraphQLSuccess(graphql));
     });

@@ -13,7 +13,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 const client = new ApolloClient({
   link: new HttpLink({
-    uri: 'http://localhost:8081/graphql',
+    uri: 'http://localhost:8082/graphql',
   }),
   cache: new InMemoryCache()
 });
@@ -21,8 +21,9 @@ const client = new ApolloClient({
 /**
  * @TODO
  * [] pin node version
- * [] explore serving graphql server and client together
  * [] add more villains
+ * [] add filter id option
+ * [] show query sample
  */
 
 function SampleApp() {

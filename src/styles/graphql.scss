@@ -17,6 +17,12 @@
     margin-bottom: 7px;
   }
 }
+
 .data-for-villans {
-  padding: 25px 0 0 ;
+  padding: 25px 0 0;
+}
+
+input[type=text] {
+  max-width: inherit;
+  width: auto;
 }
