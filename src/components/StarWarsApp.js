@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../actions/starwarsActions';
 import * as actiontypes from '../actions/starwarsTypes';
-
 import '../styles/starwars.scss';
 
 /*eslint-disable no-console */

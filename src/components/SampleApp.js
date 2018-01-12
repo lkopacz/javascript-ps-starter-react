@@ -5,18 +5,34 @@ import UserApp from './UserApp';
 import StarWarsApp from './StarWarsApp';
 import StarWarsExternalApp from './StarWarsExternalApp';
 import IncrementApp from './IncrementApp';
+import GraphqlClientApp from './GraphqlClientApp';
+import { ApolloProvider } from 'react-apollo';
+import { ApolloClient } from 'apollo-client';
+import { HttpLink } from 'apollo-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+
+const client = new ApolloClient({
+  link: new HttpLink({
+    uri: 'http://localhost:8082/graphql',
+  }),
+  cache: new InMemoryCache()
+});
 
 /**
  * @TODO
- * pin node version
- * add GraphQL
+ * [] pin node version
+ * [] add more villains
+ * [] add filter id option
+ * [] show query sample
  */
 
 function SampleApp() {
+
   return (
+
     <div className="sample-app">
 
-    <TimeTracker />
+      <TimeTracker />
 
       <h2>Collection of Sample Components</h2>
 
@@ -40,6 +56,9 @@ function SampleApp() {
         <StarWarsExternalApp />
       </div>
 
+      <ApolloProvider client={client}>
+        <GraphqlClientApp />
+      </ApolloProvider>
 
     </div>
   );
