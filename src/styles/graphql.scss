@@ -11,10 +11,11 @@
   img {
     max-width: 125px;
     height: auto;
-    border-radius: 15px;
+    border-radius: 15px; // float: left;
+    margin: 0 15px 5px 0;
   }
   >* {
-    margin-bottom: 4px;
+    margin-bottom: 2.5px;
   }
 }
 
@@ -51,7 +52,7 @@ form.graphql-form {
   border-right: 1px dashed #d3d3d3;
   margin-right: 45px;
   padding-right: 45px;
-  > span {
+  >span {
     min-width: 250px;
     clear: both;
     display: block;

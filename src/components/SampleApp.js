@@ -18,14 +18,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-/**
- * @TODO
- * [] pin node version
- * [] add more villains
- * [] add filter id option
- * [] show query sample
- */
-
 function SampleApp() {
 
   return (
