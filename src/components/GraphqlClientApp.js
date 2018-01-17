@@ -129,8 +129,9 @@ class GraphqlClientApp extends React.Component {
 
         <h4>GraphQL Client Query Component</h4>
 
-        <p>This application shows custom queries which are fetching data from the GraphQL server located at <a href="http://localhost:8082/graphiql" target="_blank">http://localhost:8082/graphiql</a>.
-        This data is also being stored within the Redux store state.</p> <br />
+        <p>This (optional) component shows custom queries which are fetching data from the GraphQL server located at <a href="http://localhost:8082/graphiql" target="_blank">http://localhost:8082/graphiql</a>.
+        This data is also being stored within the Redux store state. The component pulls various sample data which is filtered by button / input choices to illustrate query calls to the server. As with the prior components, it uses a combination of redux (same namespace locations) along with promises and typical API methods.</p>
+        <br />
 
         <form className="graphql-form">
           <span> <button className="button" type="button" value="default" onClick={this.handleClick}>Show all Villain Summary</button> </span>

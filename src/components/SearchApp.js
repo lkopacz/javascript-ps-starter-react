@@ -1,12 +1,5 @@
 import React from 'react';
 
-/**
- * use state to affect 3 things
- * pass values up thru the parent down to kids
- * review props and state relationships
- * cover the main basics // https://reactjs.org/docs/installation.html
- */
-
 class SearchApp extends React.Component {
 
   constructor(props) {
@@ -30,7 +23,7 @@ class SearchApp extends React.Component {
     return (
       <div>
         <h4>Search Component</h4>
-        <p> This is an example of prop value matching in React.  </p>
+        <p>This component was constructed to illustrate the binding of input fields as controlled components, in addition to matching and updated props and state. This component serves as the simpler example of property tracking before diving into Redux examples.</p>
         <form>
           <input type="text" placeholder="Search" value={this.state.filterText} onChange={this.handleChange} />
           <p>

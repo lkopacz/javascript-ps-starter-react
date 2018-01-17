@@ -28,8 +28,10 @@ class StarWarsExternalApp extends React.Component {
     return (
       <div className="sw-component">
         <h4>API Redux Component Shared Data (Star Wars pt. 2)</h4>
-        <p>Application showing the Redux store data being updated from the previous component and reacting on change.
-          This is illustrating maintaing a global source of data across sibling components.</p>
+        <p>Application showing the Redux store data being updated from the Star Wars (pt 1) component and reacting on change.
+          The purpose of this component is to illustrate the accessing of stored state data from a sibling component.
+          It uses the data pulled from the redux functions which are then passed to super(props, store), and manipulates in an alternative way as a pure render component.
+          </p>
         <div className="external-starwars-data">
           {api_rows}
         </div>

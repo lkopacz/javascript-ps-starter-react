@@ -32,7 +32,8 @@ class IncrementApp extends React.Component {
     return (
       <div>
         <h4>Increment Redux Component</h4>
-        <p>This is an example of Redux tracking previous and future counter markers and how these correlate in the state of the application.</p>
+        <p>This component serves as an example of Redux tracking previous and future counter markers and how these correlate in the state of the application.
+        It utilizes a basic example of the Redux workflow with the tracking an integer. This component has namespace files "increment*"" for each of the workflow matching in actions, reducers to store and retrieve the state of the store.</p>
         <p>
           <input className="button" type="button" value="- 1" onClick={this.handleClick} />
           &nbsp;
@@ -45,7 +46,7 @@ class IncrementApp extends React.Component {
 }
 
 IncrementApp.propTypes = {
-  //number: PropTypes.number.number,
+  number: PropTypes.number.number,
   actions: PropTypes.object.isRequired
 };
 
