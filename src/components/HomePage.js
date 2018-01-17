@@ -11,6 +11,12 @@ const HomePage = () => {
         The tools and configuration are just as important as the sample components, so make sure to read thru the features included in the README.md.
       </p>
 
+      <span className="img-refs">
+        <img src="https://content.screencast.com/users/BedimStudios/folders/Jing/media/77b2b73e-9b64-4cef-b1c4-571080b40176/00002805.png" />
+        <img src="https://content.screencast.com/users/BedimStudios/folders/Jing/media/dd01df46-01b9-46df-b32a-8068ae1a6b61/00002807.png" />
+        <img src="https://content.screencast.com/users/BedimStudios/folders/Jing/media/a8b5d7d2-35ad-44af-977f-bdc556fd0c17/00002806.png" />
+      </span>
+
     </div>
   );
 };

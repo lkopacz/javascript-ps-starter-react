@@ -14,13 +14,13 @@ class App extends React.Component {
         <div className="nav-bar">
           <ul className="menu">
             <li><NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink></li>
-            <li><NavLink to="/sample" activeStyle={activeStyle}>Sample App</NavLink></li>
+            <li><NavLink to="/app" activeStyle={activeStyle}>Application</NavLink></li>
           </ul>
         </div>
         <div className="content-container">
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route path="/sample" component={SampleAppPage} />
+            <Route path="/app" component={SampleAppPage} />
             <Route component={NotFoundPage} />
           </Switch>
         </div>
