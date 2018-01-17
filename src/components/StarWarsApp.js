@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/starwarsActions';
 import * as actiontypes from '../actions/starwarsTypes';
 import '../styles/starwars.scss';
-
 /*eslint-disable no-console */
 
 class StarWarsApp extends React.Component {
@@ -80,7 +79,9 @@ class StarWarsApp extends React.Component {
         <div>
           <h4>API Redux Component (Star Wars pt. 1)</h4>
           <p>A sample application showing the use of Redux when fetching external API data from a Star Wars webservice.
-            This fetches and displays API information based on choices pulled from the API. See next component for full API data.</p>
+            This fetches and displays API information based on choices pulled from the API. Tthis component intends to illustrate the use of promises and fetch within a state-aware redux workflow.
+            The associated redux files are located and namespace in actions and reducers, but also includes a src/api/starwarsAPI.js file which is called from the loadStarWars() load function.
+            </p>
           <select onChange={this.onAPIChange}>
             <option value="na">Choose API endpoint</option>
             {api_selects}

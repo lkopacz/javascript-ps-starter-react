@@ -6,7 +6,10 @@ const UserAppForm = ({ onNameChange, Name, onTitleChange, Title, onClickSave, Us
   return (
     <div className="user-container">
       <h4>User Redux Component</h4>
-      <p>This is an example of Redux and typical state workflow when dealing with persistance states.</p>
+      <p>This is an example of Redux and typical state workflow when dealing with persistance states.
+      This component builds upon the prior examples by combining controlled fields, storing state with redux,
+      and displaying on the render() level. This component is intentionally broken out in 2 files to illustrate child
+      components and how to designate the passing of those values. As with the other components, the associated redux files are located and namespace in actions and reducers.</p>
       <form onSubmit={onClickSave}>
         <input placeholder="Name" onChange={onNameChange} value={Name} type="text" />
         <input placeholder="Title" onChange={onTitleChange} value={Title} type="text" />
