@@ -1,25 +1,25 @@
 
 ## React Starter Application for Acquia PS
 
-#### About 
+### About 
 
 This is a starter application built as a baseline for creating React applications which rely heavily on API data from external sources. This application was forked from the [React Slingshot](https://github.com/coryhouse/react-slingshot) application and the full documentation has been moved in `docs\React-Slingshot.md`. This application has included a considerable amount of features to be leveraged as best practices around workflow, structure, testing, and much more. The examples are intentionally basic to provide clarity around the intents of the components.
 
-#### Installation 
+### Installation 
 
 - Install <a href="https://yarnpkg.com/lang/en/docs/install/">yarn</a> or also use `npm` for dependencies.
 - Install packages with `yarn install` or `npm install`
 - Stand up the application with `yarn start` or `npm start` and visit `http://localhost:8080`
 
 
-#### Configuration Summary 
+### Configuration Summary 
 
 Here is a quick summary of elements included within this application stack, but make sure to review the documentation for proper explanation and context. 
 
 [React](https://facebook.github.io/react/) //  [Redux](http://redux.js.org) //  [React Router](https://github.com/reactjs/react-router) //   [Babel](http://babeljs.io) //   [Webpack](https://webpack.js.org) //   [Browsersync](https://www.browsersync.io/) //  [Jest](https://facebook.github.io/jest/) //  [TrackJS](https://trackjs.com/) // [ESLint](http://eslint.org/) //   [SASS](http://sass-lang.com/) // [PostCSS](https://github.com/postcss/postcss)  // [Editor Config](http://editorconfig.org) // [NPM Build Scripts](https://docs.npmjs.com/misc/scripts)
 
 
-#### Architecture Summary 
+### Architecture Summary 
 
 **`package.json`** - includes all the proper packages references, along with the references for each of the build and testing npm scripts. Both local and production builds are separated by running either `yarn start` or `yarn build`. These build scripts are also used in tandem with the webpack config files in the root named as `webpack.config.*.js`.
 
@@ -31,7 +31,7 @@ Here is a quick summary of elements included within this application stack, but 
 
 **Styles** - this application imports the Foundation framework for the baseline styles. SASS is compiled using the	PostCSS module, which allows for JS-level imports (ie. `import '../styles/graphql.scss';`). The styles are broken out by component in `src/styles/*.scss`. 
 
-#### Components 
+### Components 
 
 **Sample Application** - `src/components/SampleApp.js` this component acts as the core files in which the other components will nest. Within this file you will see the various modular pieces included for render, ie. `<TimeTracker />`
 
@@ -49,9 +49,9 @@ Here is a quick summary of elements included within this application stack, but 
 
 **GraphQL Client** - `src/components/GraphqlClientApp.js` this (optional) component uses an external GraphQL server to pull data for display within the application. The component pulls various sample data which is filtered by button / input choices to illustrate query calls to the server. As with the prior components, it uses a combination of redux (same namespace locations) along with promises and typical API methods. 
 
-#### Set up the GraphQL server 
+### Setting up the GraphQL server 
 
-Since the final component requires a GraphQL endpoint and schema, we have included this sample application in the following repository: [https://github.com/acquia-pso/javascript-ps-starter-graphql](https://github.com/acquia-pso/javascript-ps-starter-graphql). If you used the JavaScript generator and chose 'yes' for GraphQL, the application will already be available root folder. 
+The final component requires a GraphQL server to pull data from, so we have included a sample application in [this repository](https://github.com/acquia-pso/javascript-ps-starter-graphql). If you used the [PS JavaScript Generator](https://www.npmjs.com/package/generator-js-acquia-ps) to build this application and chose 'yes' for GraphQL server, then this application will already be available root folder under the directory `/__graphql_server`.
 
 
 <br />

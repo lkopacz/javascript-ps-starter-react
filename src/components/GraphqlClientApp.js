@@ -114,7 +114,7 @@ class GraphqlClientApp extends React.Component {
 
   render() {
     const graphql_data = this.props.graphql.data;
-    console.log('this.state is here ==> ', this.state);
+    // console.log('this.state is here ==> ', this.state);
     if (graphql_data === undefined || graphql_data === null) {
       return false;
     }
